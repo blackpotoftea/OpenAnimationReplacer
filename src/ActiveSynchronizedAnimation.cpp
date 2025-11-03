@@ -225,8 +225,10 @@ void ActiveSynchronizedAnimation::Initialize()
 				replacementAnimation = replacements->EvaluateSynchronizedConditionsAndGetReplacementAnimation(sourceRefHandle.get().get(), targetRefHandle.get().get(), actorSyncInfo.synchronizedClipGenerator->clipGenerator);
 				if (replacementAnimation) {
 					// handle variants
-					if (!_variantRandomWeight && replacementAnimation->HasVariants()) {
-						_variantRandomWeight = Utils::GetRandomFloat(0.f, 1.f);  // saving the random value will ensure we get the same variant for all involved clips
+					if (replacementAnimation->HasVariants()) {
+						if (!_variantRandomWeight) {
+							_variantRandomWeight = Utils::GetRandomFloat(0.f, 1.f);  // saving the random value will ensure we get the same variant for all involved clips
+						}
 						replacementAnimation->GetIndex(variant, *_variantRandomWeight);
 					}
 				}
