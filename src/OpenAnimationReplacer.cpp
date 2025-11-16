@@ -1217,6 +1217,60 @@ void OpenAnimationReplacer::ForEachRegisteredStateData(std::function<void(IState
 	}
 }
 
+float OpenAnimationReplacer::GetOrCreateSharedSynchronizedVariantWeight(RE::TESObjectREFR* a_source, RE::TESObjectREFR* a_target)
+{
+	const auto sourceFormID = a_source->GetFormID();
+	const auto targetFormID = a_target->GetFormID();
+
+	// Sort to ensure consistent ordering regardless of which actor is "source" or "target"
+	const auto key = sourceFormID < targetFormID ? std::make_pair(sourceFormID, targetFormID) : std::make_pair(targetFormID, sourceFormID);
+
+	WriteLocker locker(_sharedSynchronizedVariantWeightsLock);
+
+	if (auto it = _sharedSynchronizedVariantWeights.find(key); it != _sharedSynchronizedVariantWeights.end()) {
+		// Found existing entry - increment reference count
+		it->second.refCount++;
+		logger::info("Reusing shared variant weight for actors {:X} and {:X}: {:.4f} (refCount={})",
+			sourceFormID, targetFormID, it->second.weight, it->second.refCount);
+		return it->second.weight;
+	}
+
+	// Not found, create new random weight
+	const float newWeight = Utils::GetRandomFloat(0.f, 1.f);
+	_sharedSynchronizedVariantWeights[key] = SharedVariantWeightData{ newWeight, 1 };
+	logger::info("Created shared variant weight for actors {:X} and {:X}: {:.4f} (refCount=1)", sourceFormID, targetFormID, newWeight);
+	return newWeight;
+}
+
+void OpenAnimationReplacer::RemoveSharedSynchronizedVariantWeight(RE::TESObjectREFR* a_source, RE::TESObjectREFR* a_target)
+{
+	const auto sourceFormID = a_source->GetFormID();
+	const auto targetFormID = a_target->GetFormID();
+
+	// Sort to ensure consistent ordering regardless of which actor is "source" or "target"
+	const auto key = sourceFormID < targetFormID ? std::make_pair(sourceFormID, targetFormID) : std::make_pair(targetFormID, sourceFormID);
+
+	WriteLocker locker(_sharedSynchronizedVariantWeightsLock);
+	if (auto it = _sharedSynchronizedVariantWeights.find(key); it != _sharedSynchronizedVariantWeights.end()) {
+		// Decrement reference count
+		it->second.refCount--;
+		logger::info("Decremented shared variant weight refCount for actors {:X} and {:X}: weight={:.4f}, refCount={}",
+			sourceFormID, targetFormID, it->second.weight, it->second.refCount);
+
+		// Only remove from cache when reference count reaches zero
+		if (it->second.refCount == 0) {
+			_sharedSynchronizedVariantWeights.erase(it);
+			logger::info("Removed shared variant weight for actors {:X} and {:X} (refCount reached 0)", sourceFormID, targetFormID);
+		}
+	}
+}
+
+void OpenAnimationReplacer::ClearSharedSynchronizedVariantWeights()
+{
+	WriteLocker locker(_sharedSynchronizedVariantWeightsLock);
+	_sharedSynchronizedVariantWeights.clear();
+}
+
 void OpenAnimationReplacer::InitDefaultProjects() const
 {
 	// create a dummy male and female character to force the behaviors to load

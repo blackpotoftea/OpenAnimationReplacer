@@ -10,6 +10,20 @@ ActiveSynchronizedAnimation::ActiveSynchronizedAnimation(RE::BGSSynchronizedAnim
 
 ActiveSynchronizedAnimation::~ActiveSynchronizedAnimation()
 {
+	// Clear the shared variant weight for this actor pair so next killmove gets a new random variant
+	if (_synchronizedAnimationInstance && _synchronizedAnimationInstance->refHandles.size() >= 2) {
+		const auto sourceRefHandle = _synchronizedAnimationInstance->refHandles[0];
+		const auto targetRefHandle = _synchronizedAnimationInstance->refHandles[1];
+		if (sourceRefHandle && targetRefHandle) {
+			const auto sourceActor = sourceRefHandle.get().get();
+			const auto targetActor = targetRefHandle.get().get();
+			if (sourceActor && targetActor) {
+				// Remove the shared weight so next synchronized animation gets a fresh random value
+				OpenAnimationReplacer::GetSingleton().RemoveSharedSynchronizedVariantWeight(sourceActor, targetActor);
+			}
+		}
+	}
+
 	ReadLocker locker(_clipDataLock);
 
 	for (auto& [synchronizedClipGenerator, replacementInfo] : _clipData) {
@@ -202,14 +216,67 @@ void ActiveSynchronizedAnimation::Initialize()
 		return;
 	}
 
+	logger::info("========================================");
+	logger::info("ActiveSynchronizedAnimation::Initialize() - instance={:X}, actorCount={}",
+		reinterpret_cast<uintptr_t>(_synchronizedAnimationInstance),
+		_synchronizedAnimationInstance->actorSyncInfos.size());
+
 	const auto sourceRefHandle = _synchronizedAnimationInstance->refHandles[0];  // source is always first
 	const auto targetRefHandle = _synchronizedAnimationInstance->refHandles[1];
 
+	// First pass: find ANY actor that has a valid replacement with variants
+	ReplacementAnimation* sharedReplacementAnimation = nullptr;
+	Variant* sharedVariant = nullptr;
+
 	{
 		WriteLocker locker(_clipDataLock);
+
+		logger::info("--- FIRST PASS: Finding shared replacement ---");
+		// First pass: check all actors and find the first valid replacement
+		for (const auto& actorSyncInfo : _synchronizedAnimationInstance->actorSyncInfos) {
+			logger::info("  First pass: checking actor {:X}", reinterpret_cast<uintptr_t>(actorSyncInfo.character));
+			AnimationReplacements* replacements = OpenAnimationReplacer::GetSingleton().GetReplacements(actorSyncInfo.character, actorSyncInfo.synchronizedClipGenerator->clipGenerator->animationBindingIndex);
+			logger::info("  First pass: replacements={}", replacements != nullptr);
+			if (replacements) {
+				ReplacementAnimation* replacementAnimation = replacements->EvaluateSynchronizedConditionsAndGetReplacementAnimation(sourceRefHandle.get().get(), targetRefHandle.get().get(), actorSyncInfo.synchronizedClipGenerator->clipGenerator);
+				logger::info("  First pass: replacementAnimation={}, hasVariants={}",
+					replacementAnimation != nullptr,
+					replacementAnimation ? replacementAnimation->HasVariants() : false);
+				if (replacementAnimation && replacementAnimation->HasVariants()) {
+					// Found a valid replacement with variants - use this for ALL actors
+					if (!_variantRandomWeight) {
+						const auto sourceActor = sourceRefHandle.get().get();
+						const auto targetActor = targetRefHandle.get().get();
+						const auto sharedWeight = OpenAnimationReplacer::GetSingleton().GetOrCreateSharedSynchronizedVariantWeight(sourceActor, targetActor);
+						_variantRandomWeight = sharedWeight;
+						logger::info("  First pass: Using shared variant weight: {:.4f} (source={:X}, target={:X})",
+							sharedWeight,
+							sourceActor->GetFormID(),
+							targetActor->GetFormID());
+					}
+					const uint16_t variantIndex = replacementAnimation->GetIndex(sharedVariant, *_variantRandomWeight);
+					sharedReplacementAnimation = replacementAnimation;
+					logger::info("  First pass: Found shared replacement with variant index {} for all actors", variantIndex);
+					break;
+				}
+			}
+		}
+
+		logger::info("--- SECOND PASS: Applying replacements to all actors ---");
+		if (sharedReplacementAnimation) {
+			logger::info("  Shared replacement found in first pass - will apply to ALL actors");
+		} else {
+			logger::info("  No shared replacement found - using individual evaluation");
+		}
+
+		// Second pass: apply replacements to all actors
 		for (const auto& actorSyncInfo : _synchronizedAnimationInstance->actorSyncInfos) {
 			const uint16_t originalSynchronizedIndex = actorSyncInfo.synchronizedClipGenerator->animationBindingIndex;
 			const uint16_t originalInternalClipIndex = actorSyncInfo.synchronizedClipGenerator->clipGenerator->animationBindingIndex;
+
+			logger::info("  ------ Actor {:X} ------", reinterpret_cast<uintptr_t>(actorSyncInfo.character));
+			logger::info("  Processing actor: {:X}, originalIndex={}",
+				reinterpret_cast<uintptr_t>(actorSyncInfo.character), originalInternalClipIndex);
 
 			// fix ID if we aren't running Paired Animation Improvements
 			if (actorSyncInfo.synchronizedClipGenerator->animationBindingIndex != static_cast<uint16_t>(-1)) {
@@ -221,15 +288,43 @@ void ActiveSynchronizedAnimation::Initialize()
 
 			Variant* variant = nullptr;
 
-			if (replacements) {
+			logger::info("  Replacements found: {}", replacements != nullptr);
+
+			// If we found a shared replacement in first pass, use it for ALL actors
+			if (sharedReplacementAnimation) {
+				replacementAnimation = sharedReplacementAnimation;
+				variant = sharedVariant;
+				logger::info("  Using shared replacement from first pass for actor {:X}, variantPtr={}",
+					reinterpret_cast<uintptr_t>(actorSyncInfo.character),
+					reinterpret_cast<uintptr_t>(variant));
+			} else if (replacements) {
+				// No shared replacement found, use individual evaluation
 				replacementAnimation = replacements->EvaluateSynchronizedConditionsAndGetReplacementAnimation(sourceRefHandle.get().get(), targetRefHandle.get().get(), actorSyncInfo.synchronizedClipGenerator->clipGenerator);
+				logger::info("  ReplacementAnimation found: {}", replacementAnimation != nullptr);
 				if (replacementAnimation) {
 					// handle variants
 					if (replacementAnimation->HasVariants()) {
 						if (!_variantRandomWeight) {
-							_variantRandomWeight = Utils::GetRandomFloat(0.f, 1.f);  // saving the random value will ensure we get the same variant for all involved clips
+							// Check if we can reuse random weight from another synchronized animation instance with same actors
+							// This fixes desync when player has both 1st and 3rd person killmove cameras creating multiple instances
+							const auto sourceActor = sourceRefHandle.get().get();
+							const auto targetActor = targetRefHandle.get().get();
+							const auto sharedWeight = OpenAnimationReplacer::GetSingleton().GetOrCreateSharedSynchronizedVariantWeight(sourceActor, targetActor);
+							_variantRandomWeight = sharedWeight;
+							logger::info("  Using shared variant weight: {:.4f} (source={:X}, target={:X})",
+								sharedWeight,
+								sourceActor->GetFormID(),
+								targetActor->GetFormID());
+						} else {
+							logger::info("  Reusing instance variant weight: {:.4f}", *_variantRandomWeight);
 						}
-						replacementAnimation->GetIndex(variant, *_variantRandomWeight);
+						const uint16_t variantIndex = replacementAnimation->GetIndex(variant, *_variantRandomWeight);
+						logger::info("Synchronized variant selection: actor={:X}, replacementAnim={}, randomWeight={:.4f}, variantIndex={}, variantPtr={}",
+							reinterpret_cast<uintptr_t>(actorSyncInfo.character),
+							replacementAnimation->GetAnimPath(),
+							*_variantRandomWeight,
+							variantIndex,
+							reinterpret_cast<uintptr_t>(variant));
 					}
 				}
 			}
@@ -248,6 +343,7 @@ void ActiveSynchronizedAnimation::Initialize()
 	_bIsReplacementActive = ShouldSynchronizedClipReplacementBeActive();
 
 	_bInitialized = true;
+	logger::info("========================================");
 }
 
 void ActiveSynchronizedAnimation::ToggleReplacement(bool a_bEnable)

@@ -141,6 +141,10 @@ public:
 	void RunStateDataUpdates();
 	void ForEachRegisteredStateData(std::function<void(IStateDataContainerHolder*)> a_func) const;
 
+	[[nodiscard]] float GetOrCreateSharedSynchronizedVariantWeight(RE::TESObjectREFR* a_source, RE::TESObjectREFR* a_target);
+	void RemoveSharedSynchronizedVariantWeight(RE::TESObjectREFR* a_source, RE::TESObjectREFR* a_target);
+	void ClearSharedSynchronizedVariantWeights();
+
 	static inline bool bKeywordsLoaded = false;
 	static inline RE::BGSKeyword* kywd_weapTypeWarhammer = nullptr;
 	static inline RE::BGSKeyword* kywd_weapTypeBattleaxe = nullptr;
@@ -206,6 +210,19 @@ protected:
 	std::set<IStateDataContainerHolder*> _registeredStateDatas;
 
 	StateDataContainer<std::string> _conditionStateData;
+
+	// Cache for sharing variant random weights across multiple synchronized animation instances (e.g. 1st/3rd person killmoves)
+	struct PairHash {
+		size_t operator()(const std::pair<uint32_t, uint32_t>& p) const {
+			return std::hash<uint32_t>{}(p.first) ^ (std::hash<uint32_t>{}(p.second) << 1);
+		}
+	};
+	struct SharedVariantWeightData {
+		float weight;
+		uint32_t refCount = 1;  // Reference counter for multiple simultaneous animations
+	};
+	mutable SharedLock _sharedSynchronizedVariantWeightsLock;
+	std::unordered_map<std::pair<uint32_t, uint32_t>, SharedVariantWeightData, PairHash> _sharedSynchronizedVariantWeights;
 
 private:
 	OpenAnimationReplacer() = default;
