@@ -1,0 +1,312 @@
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB91F5E0, actorCount=2
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.8349 (NO SHARED CACHE)
+[2025-11-17 00:53:11.391] [info] [47188] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1658 for all actors
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938336
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938336
+[2025-11-17 00:53:11.392] [info] [47188] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB79F860, actorCount=2
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.3313 (NO SHARED CACHE)
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1656 for all actors
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938224
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938224
+[2025-11-17 00:53:19.192] [info] [33812] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB619CC0, actorCount=2
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.0459 (NO SHARED CACHE)
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1656 for all actors
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938224
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938224
+[2025-11-17 00:53:28.926] [info] [46888] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB91E5A0, actorCount=2
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.1468 (NO SHARED CACHE)
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1656 for all actors
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938224
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:38.493] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:38.494] [info] [27880] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938224
+[2025-11-17 00:53:38.494] [info] [27880] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB1CFB80, actorCount=2
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.8101 (NO SHARED CACHE)
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1658 for all actors
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938336
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938336
+[2025-11-17 00:53:48.461] [info] [50752] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB91EA00, actorCount=2
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.9803 (NO SHARED CACHE)
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1658 for all actors
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938336
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938336
+[2025-11-17 00:53:55.228] [info] [50752] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB36D860, actorCount=2
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:264]   No shared replacement found - using individual evaluation
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:305]   Generated variant weight: 0.2469 (NO SHARED CACHE)
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:310] Synchronized variant selection: actor=22C155722D0, replacementAnim=data\meshes\actors\character\animations\OpenAnimationReplacer\VampireAnimations\feed_km\DLC01\_variants_paired_VampFeedFront, randomWeight=0.2469, variantIndex=1656, variantPtr=2396723938224
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: true
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:307]   Reusing instance variant weight: 0.2469
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:310] Synchronized variant selection: actor=22C15662320, replacementAnim=data\meshes\actors\character\animations\OpenAnimationReplacer\VampireAnimations\feed_km\DLC01\_variants_paired_VampFeedFront, randomWeight=0.2469, variantIndex=1656, variantPtr=2396723938224
+[2025-11-17 00:54:02.062] [info] [27880] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB1CFB80, actorCount=2
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15D76260
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.5096 (NO SHARED CACHE)
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1657 for all actors
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938456
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15D76260 ------
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15D76260, originalIndex=1299
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15D76260, variantPtr=2396723938456
+[2025-11-17 00:57:10.526] [info] [46888] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB1CFB80, actorCount=2
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.9499 (NO SHARED CACHE)
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1658 for all actors
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938336
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15D76260 ------
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15D76260, originalIndex=1299
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15D76260, variantPtr=2396723938336
+[2025-11-17 00:57:22.860] [info] [21848] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:29.910] [info] [33812] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:29.910] [info] [33812] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB3145A0, actorCount=2
+[2025-11-17 00:57:29.910] [info] [33812] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:29.910] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:29.910] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.7773 (NO SHARED CACHE)
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1658 for all actors
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938336
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15D76260 ------
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15D76260, originalIndex=1299
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15D76260, variantPtr=2396723938336
+[2025-11-17 00:57:29.911] [info] [33812] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB618BE0, actorCount=2
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.4801 (NO SHARED CACHE)
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1657 for all actors
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938280
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15D76260 ------
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15D76260, originalIndex=1299
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:38.094] [info] [33812] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15D76260, variantPtr=2396723938280
+[2025-11-17 00:57:38.095] [info] [33812] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB486000, actorCount=2
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C156636C0
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:264]   No shared replacement found - using individual evaluation
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: false
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C156636C0 ------
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C156636C0, originalIndex=1299
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: true
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:305]   Generated variant weight: 0.4929 (NO SHARED CACHE)
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:310] Synchronized variant selection: actor=22C156636C0, replacementAnim=data\meshes\actors\character\animations\OpenAnimationReplacer\VampireAnimations\feed_km\DLC01\_variants_paired_VampFeedFront, randomWeight=0.4929, variantIndex=1657, variantPtr=2396723938280
+[2025-11-17 00:57:51.429] [info] [21848] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB4F60A0, actorCount=2
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C156636C0
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.3377 (NO SHARED CACHE)
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1657 for all actors
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938280
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C156636C0 ------
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C156636C0, originalIndex=1299
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C156636C0, variantPtr=2396723938280
+[2025-11-17 00:57:57.546] [info] [27880] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB6277C0, actorCount=2
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 01:07:36.987] [info] [33812] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:264]   No shared replacement found - using individual evaluation
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: false
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:298]   ReplacementAnimation found: false
+[2025-11-17 01:07:36.988] [info] [33812] [ActiveSynchronizedAnimation.cpp:334] ========================================
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:218] ========================================
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:219] ActiveSynchronizedAnimation::Initialize() - instance=22DBB79EBE0, actorCount=2
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:233] --- FIRST PASS: Finding shared replacement ---
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C155722D0
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=false, hasVariants=false
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:236]   First pass: checking actor 22C15662320
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:238]   First pass: replacements=true
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:241]   First pass: replacementAnimation=true, hasVariants=true
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:249]   First pass: Generated variant weight: 0.5061 (NO SHARED CACHE)
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:254]   First pass: Found shared replacement with variant index 1657 for all actors
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:260] --- SECOND PASS: Applying replacements to all actors ---
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:262]   Shared replacement found in first pass - will apply to ALL actors
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C155722D0 ------
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C155722D0, originalIndex=1299
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C155722D0, variantPtr=2396723938280
+[2025-11-17 01:07:40.854] [info] [21848] [ActiveSynchronizedAnimation.cpp:272]   ------ Actor 22C15662320 ------
+[2025-11-17 01:07:40.855] [info] [21848] [ActiveSynchronizedAnimation.cpp:273]   Processing actor: 22C15662320, originalIndex=1299
+[2025-11-17 01:07:40.855] [info] [21848] [ActiveSynchronizedAnimation.cpp:286]   Replacements found: true
+[2025-11-17 01:07:40.855] [info] [21848] [ActiveSynchronizedAnimation.cpp:292]   Using shared replacement from first pass for actor 22C15662320, variantPtr=2396723938280
+[2025-11-17 01:07:40.855] [info] [21848] [ActiveSynchronizedAnimation.cpp:334] ========================================
